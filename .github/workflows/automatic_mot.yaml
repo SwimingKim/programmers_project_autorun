@@ -6,14 +6,16 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: self-hosted
     steps:
-      - run: |
+      - name: Generate Pseudo Lidar
+        run: |
             eval "$(pyenv init -)"
             pyenv activate py37
             cd /home/ubuntu/dev/Pseudo_Lidar_V2
             ./commands/10_fake_process.sh
-      - run: |
+      - name: Run 3D MOT
+        run: |
             eval "$(pyenv init -)"
-            ./commands/10_fake_process.sh
+            pyenv activate py37
             cd /home/ubuntu/dev/ad-5-final-project-team5/AB3DMOT
             ./commands/7_fake_tracking_linking.sh
             ./commands/8_run_all.sh
