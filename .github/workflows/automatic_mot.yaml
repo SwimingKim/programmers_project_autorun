@@ -1,0 +1,18 @@
+name: 3D MOT Using Pseudo Lidar
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: self-hosted
+    steps:
+      - run: |
+            pyenv activate py37
+            cd /home/ubuntu/dev/Pseudo_Lidar_V2
+            ./commands/10_fake_process.sh
+      - run: |
+            ./commands/10_fake_process.sh
+            cd /home/ubuntu/dev/ad-5-final-project-team5/AB3DMOT
+            ./commands/7_fake_tracking_linking.sh
+            ./commands/8_run_all.sh
+            ./commands/10_upload_source.sh
