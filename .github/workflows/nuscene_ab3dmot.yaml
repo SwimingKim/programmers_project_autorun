@@ -1,0 +1,14 @@
+name: 3D MOT
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: self-hosted
+    steps:
+      - name: Run 3D MOT
+        run: |
+            eval "$(pyenv init -)"
+            pyenv activate py37
+            cd /home/ubuntu/dev/ad-5-final-project-team5/AB3DMOT
+            ./commands/21_run_nukitti.sh 
