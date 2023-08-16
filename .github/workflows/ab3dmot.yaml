@@ -10,9 +10,11 @@ jobs:
         run: |
             eval "$(pyenv init -)"
             pyenv activate py37
+            cd /home/ubuntu/dev/ad-5-final-project-team5/AB3DMOT
             ./commands/20_run_kitti.sh
       - name: Upload To Drive
         run: |
             eval "$(pyenv init -)"
             pyenv activate py37
+            cd /home/ubuntu/dev/ad-5-final-project-team5/AB3DMOT
             ./commands/10_upload_source.sh
