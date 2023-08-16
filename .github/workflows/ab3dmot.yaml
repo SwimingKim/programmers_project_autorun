@@ -9,10 +9,10 @@ jobs:
       - name: Run 3D MOT
         run: |
             eval "$(pyenv init -)"
-            pyenv activate py37å
+            pyenv activate py37
             ./commands/20_run_kitti.sh
       - name: Upload To Drive
         run: |
             eval "$(pyenv init -)"
-            pyenv activate py37å
+            pyenv activate py37
             ./commands/10_upload_source.sh
