@@ -1,4 +1,4 @@
-name: 3D MOT
+name: NuScene 3D MOT
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   workflow_dispatch:
