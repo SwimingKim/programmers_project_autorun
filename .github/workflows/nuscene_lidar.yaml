@@ -1,0 +1,14 @@
+name: NuScene Pseudo Lidar
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  workflow_dispatch:
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: self-hosted
+    steps:
+      - name: Generate Pseudo Lidar
+        run: |
+            eval "$(pyenv init -)"
+            pyenv activate py37
+            cd /home/ubuntu/dev/ad-5-final-project-team5/monodepth2
+            ./commands/3_nuscene_lidar.sh
