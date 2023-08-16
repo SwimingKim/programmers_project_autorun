@@ -9,9 +9,10 @@ jobs:
       - name: Run 3D MOT
         run: |
             eval "$(pyenv init -)"
-            pyenv activate py37
-            cd /home/ubuntu/dev/ad-5-final-project-team5/AB3DMOT
+            pyenv activate py37å
             ./commands/20_run_kitti.sh
-            ./commands/2_eval.sh
-            ./commands/3_threshold.sh
-            ./commands/4_visualization.sh
+      - name: Upload To Drive
+        run: |
+            eval "$(pyenv init -)"
+            pyenv activate py37å
+            ./commands/10_upload_source.sh
